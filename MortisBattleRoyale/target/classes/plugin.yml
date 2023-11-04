@@ -1,0 +1,26 @@
+name: MortisBattleRoyale
+version: '1.0'
+main: org.mortisdevelopment.mortisbattleroyale.MortisBattleRoyale
+api-version: '1.13'
+commands:
+  brstart:
+    description: Starts the battle Royale match which last until the whole map shrinks.
+  brshrink:
+    description: Shrinks the world border of arena to 0 to let the match end and choose the final survivor.
+  brbreset:
+    description: Resets the world border of the arena to it's original state defined in configuration file.
+  brleave:
+    description: Leave the battle royale match.
+permissions:
+  mortis.battleroyale.falcon:
+    description: Makes you stronger enough to bear the fall damage after jumping from the plane.
+    default: false
+  mortis.battleroyale.borderreset:
+    description: Permits you to run command and reset the world border to its original state.
+    default: false
+  mortis.battleroyale.bordershrink:
+    description: Permits you to run command and shrink the world border.
+    default: false
+  mortis.battleroyale.start:
+    description: Permits you to run command and start the match by teleporting all players to the arena.
+    default: false

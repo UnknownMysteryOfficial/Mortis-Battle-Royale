@@ -1,0 +1,68 @@
+# Arena configuration
+spawnpoint:
+  # x coordinates for the spawn-point to be set.
+  x: 1000
+  # y coordinates for the spawn-point to be set.
+  y: 91
+  # z coordinates for the spawn-point to be set.
+  z: 1000
+  # world name where the spawn-point will be set.
+  world: world
+
+# Border configuration
+border:
+  # What should be the size for the border (eg: 200 means 200x200)
+  size: 200
+  # Center "x" coordinate for the world border.
+  center-x: 1000
+  # Center "z" coordinate for the world border.
+  center-z: 1000
+# What should be the size of the world border after it is being reset (here 200 refers to 200x200)
+originalSize: 200
+
+# Loot drop configuration
+loot-drop:
+  # Interval in seconds between loot drops
+  interval: 5
+
+  # List of items to be dropped in the loot chests
+  # Format MATERIAL:AMOUNT:PROBABILITY
+  items:
+    - "DIAMOND_SWORD:1:100"
+    - "DIAMOND:26:50"
+    - "GOLDEN_APPLE:16:80"
+    - "DIAMOND_CHESTPLATE:1:90"
+    - "DIAMOND_BOOTS:1:90"
+    - "DIAMOND_LEGGINGS:1:90"
+    - "DIAMOND_HELMET:1:90"
+
+# Specify a 4x4 region in which the loot chest should be spawning
+region:
+  x1: 100
+  z1: 100
+  x2: 200
+  z2: 200
+
+# The location where the players should be teleported once the match has ended or when the players use
+# /brleave command after they are dead and no more wants to spectate.
+tp-world: world
+tp-x: 1000
+tp-y: 91
+tp-z: 1000
+
+# Where the player should be teleported once the match has ended?
+winning-world: world_nether
+winning-x: 1000
+winning-y: 91
+winning-z: 1000
+
+# Message configuration
+# Whether the message should be broadcast once a loot crate is dropped.
+broadcast: false
+# If enabled, what message should be broadcast.
+broadcast-message: "&2New loot drop at {x}, {y} and {z}"
+# The message that is sent when the player receives a fall damage but the damage is cancelled.
+# Requires mortis.battleroyale.falcon
+no-damage-msg: "&2Ughh, that hurts... BUT NOT ANYMORE!"
+# The message that is sent when players don't have the desired permission and receives the fall damage.
+damage-msg: "&cUGGGHHHH, MY LEGS! How the f**k am I still alive?"
